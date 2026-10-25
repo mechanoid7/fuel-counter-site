@@ -1,55 +1,45 @@
 # Fuel Counter — Official Website & Legal Pages
 
-This repository hosts the official landing page, legal documents (Privacy Policy, Terms of Service), and Google AdMob `app-ads.txt` authorization file for the **Fuel Counter** mobile app.
+Official landing page, legal compliance documents (Privacy Policy, Terms of Service), and Google AdMob verification (`app-ads.txt`) for the **Fuel Counter** Android mobile application.
 
-## Repository Contents
-
-- `index.html` — Main app landing page (in English).
-- `privacy-policy.html` — Privacy Policy page (insert your generated HTML inside the placeholder).
-- `terms.html` — Terms & Conditions page (insert your generated HTML inside the placeholder).
-- `app-ads.txt` — Google AdMob developer verification file (`google.com, pub-2577347291345423, DIRECT, f08c47fec0942fa0`).
-- `.nojekyll` — Ensures GitHub Pages serves all static files and `app-ads.txt` directly without Jekyll filtering.
-- `assets/` — Application icons, logos, and favicons.
+- **Live Website:** [https://mechanoid7.github.io/fuel-counter-site/](https://mechanoid7.github.io/fuel-counter-site/)
+- **Google Play:** [Fuel Counter on Google Play](https://play.google.com/store/apps/details?id=com.nvos.fuelcounter)
+- **Privacy Policy:** [https://mechanoid7.github.io/fuel-counter-site/privacy-policy.html](https://mechanoid7.github.io/fuel-counter-site/privacy-policy.html)
+- **Terms of Service:** [https://mechanoid7.github.io/fuel-counter-site/terms.html](https://mechanoid7.github.io/fuel-counter-site/terms.html)
+- **AdMob app-ads.txt:** [https://mechanoid7.github.io/fuel-counter-site/app-ads.txt](https://mechanoid7.github.io/fuel-counter-site/app-ads.txt)
 
 ---
 
-## How to Publish to GitHub Pages
+## Google Play Console & AdMob Configuration
 
-1. **Create a GitHub Repository:**
-   - Go to [GitHub](https://github.com/new).
-   - Create a new public repository (e.g. `fuel-counter-site` or `<your-username>.github.io`).
+- **Website URL:**
+  ```text
+  https://mechanoid7.github.io/fuel-counter-site/
+  ```
+  *(In Play Console: Store presence ➔ Store settings ➔ Store listing contact details ➔ Website)*
 
-2. **Push this folder to GitHub:**
-   ```bash
-   cd C:\Users\Nikita\WebstormProjects\fuel-counter-site
-   git init
-   git add .
-   git commit -m "feat: initial commit for Fuel Counter website and legal pages"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/<repo-name>.git
-   git push -u origin main
-   ```
+- **Privacy Policy URL:**
+  ```text
+  https://mechanoid7.github.io/fuel-counter-site/privacy-policy.html
+  ```
+  *(In Play Console: Policy and programs ➔ App content ➔ Privacy policy)*
 
-3. **Enable GitHub Pages:**
-   - In your GitHub repository, navigate to **Settings** ➔ **Pages**.
-   - Under **Build and deployment** ➔ **Branch**: select `main` (root) and click **Save**.
-   - Your site will be live at: `https://<your-username>.github.io/<repo-name>/` (or `https://<your-username>.github.io/` if using username repo).
+- **AdMob App-Ads.txt Verification:**
+  ```text
+  https://mechanoid7.github.io/fuel-counter-site/app-ads.txt
+  ```
+  *(Google AdMob automatically crawls the app-ads.txt file using the developer website specified in the store listing)*
 
 ---
 
-## Linking in Google Play Console & AdMob
+## Deployment
 
-- **Website in Google Play Console:**
-  Navigate to *Store presence* ➔ *Store settings* ➔ *Store listing contact details* ➔ *Website*, and enter your GitHub Pages URL:
-  ```
-  https://<your-username>.github.io/<repo-name>/
-  ```
+The website is deployed automatically via **GitHub Pages** from the root of the `main` branch:
+[https://github.com/mechanoid7/fuel-counter-site](https://github.com/mechanoid7/fuel-counter-site)
 
-- **Privacy Policy in Google Play Console:**
-  Navigate to *App content* ➔ *Privacy policy*, and enter:
-  ```
-  https://<your-username>.github.io/<repo-name>/privacy-policy.html
-  ```
-
-- **AdMob verification:**
-  Google AdMob will automatically crawl `https://<your-username>.github.io/<repo-name>/app-ads.txt` and verify your app within 24 hours.
+To publish updates:
+```bash
+git add .
+git commit -m "update site content and legal policies"
+git push origin main
+```
